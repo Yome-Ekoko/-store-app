@@ -2,7 +2,6 @@ package convenienceStore;
 
 import enums.TypeOfProducts;
 
-import java.util.ArrayList;
 
 public class Product {
     private String productName;
@@ -10,7 +9,7 @@ public class Product {
     private Double price;
     private Integer quantity;
     private TypeOfProducts typeOfProduct;
-//    private Double amount;
+
 
     public Product() {
     }
@@ -63,15 +62,12 @@ public class Product {
     public void setTypeOfProduct(TypeOfProducts typeOfProduct) {
         this.typeOfProduct = typeOfProduct;
     }
-//
+
     public Double getAmount() {
       Double amount =   this.price * this.quantity;
         return amount;
     }
-//
-//    public void setAmount(Double amount) {
-//        this.amount = amount;
-//    }
+
 
     @Override
     public String toString() {
