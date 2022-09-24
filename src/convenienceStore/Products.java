@@ -1,20 +1,22 @@
 package convenienceStore;
 
-import enums.TypeOfProducts;
 
+import enums.ProductType;
 
-public class Product {
+public abstract class Products {
     private String productName;
     private String productId;
     private Double price;
     private Integer quantity;
-    private TypeOfProducts typeOfProduct;
+    private ProductType typeOfProduct;
+
+    private Double amount;
 
 
-    public Product() {
+    public Products() {
     }
 
-    public Product(String productName, String productId, Double price, Integer quantity, TypeOfProducts typeOfProduct) {
+    public Products(String productName, String productId, Double price, Integer quantity, ProductType typeOfProduct) {
         this.productName = productName;
         this.productId = productId;
         this.price = price;
@@ -55,11 +57,11 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public TypeOfProducts getTypeOfProduct() {
+    public ProductType getTypeOfProduct() {
         return typeOfProduct;
     }
 
-    public void setTypeOfProduct(TypeOfProducts typeOfProduct) {
+    public void setTypeOfProduct(ProductType typeOfProduct) {
         this.typeOfProduct = typeOfProduct;
     }
 

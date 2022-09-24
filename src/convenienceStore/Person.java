@@ -1,20 +1,23 @@
 package convenienceStore;
 
+import enums.Gender;
 import enums.Role;
 
 public abstract class Person {
     private String name;
-    private String Gender;
+    private Gender gender;
     private String email;
-    private Role role;
+   private Integer age;
+
 
     public Person() {
     }
 
-    public Person(String name, String gender, String email) {
+    public Person(String name, Gender gender, String email, Integer age) {
         this.name = name;
-        Gender = gender;
+        this.gender = gender;
         this.email = email;
+        this.age = age;
     }
 
     public String getName() {
@@ -25,12 +28,12 @@ public abstract class Person {
         this.name = name;
     }
 
-    public String getGender() {
-        return Gender;
+    public Gender getGender() {
+        return gender;
     }
 
-    public void setGender(String gender) {
-        Gender = gender;
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
     public String getEmail() {
@@ -40,4 +43,23 @@ public abstract class Person {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", gender=" + gender +
+                ", email='" + email + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
+

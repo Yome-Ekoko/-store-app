@@ -1,20 +1,27 @@
 package convenienceStore;
 
 import enums.Departments;
+import enums.Gender;
+import enums.Role;
 
 public class Staff extends Person {
     private Integer id;
     private Departments department;
-
-    public Staff(Integer id, Departments department) {
-        this.id = id;
-        this.department = department;
+    private Role role;
+    public Staff() {
     }
 
-    public Staff(String name, String gender, String email, Integer id, Departments department) {
-        super(name, gender, email);
+    public Staff(Integer id, Departments department, Role role) {
         this.id = id;
         this.department = department;
+        this.role = role;
+    }
+
+    public Staff(String name, Gender gender, String email, Integer age, Integer id, Departments department, Role role) {
+        super(name, gender, email, age);
+        this.id = id;
+        this.department = department;
+        this.role = role;
     }
 
     public Integer getId() {
@@ -31,6 +38,14 @@ public class Staff extends Person {
 
     public void setDepartment(Departments department) {
         this.department = department;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     @Override

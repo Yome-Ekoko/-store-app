@@ -1,17 +1,19 @@
 package convenienceStore;
 
 import java.util.List;
+import java.util.Set;
 
 public class Store {
     private Integer id;
     private String storeName;
     private List<Staff> staff;
-   private List<Product> allProducts;
+
+    private List<Products> allProducts;
 
     public Store() {
     }
 
-    public Store(Integer id, String storeName, List<Staff> staff, List<Product> allProducts) {
+    public Store(Integer id, String storeName, List<Staff> staff, List<Products> allProducts) {
         this.id = id;
         this.storeName = storeName;
         this.staff = staff;
@@ -42,11 +44,11 @@ public class Store {
         this.staff = staff;
     }
 
-    public List<Product> getAllProducts() {
+    public List<Products> getAllProducts() {
         return allProducts;
     }
 
-    public void setAllProducts(List<Product> allProducts) {
+    public void setAllProducts(List<Products> allProducts) {
         this.allProducts = allProducts;
     }
 
@@ -60,3 +62,4 @@ public class Store {
                 '}';
     }
 }
+

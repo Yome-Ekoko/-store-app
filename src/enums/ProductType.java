@@ -1,0 +1,5 @@
+package enums;
+
+public enum ProductType{
+    BEAUTY_AND_HEALTH, PERISHABLE_FOOD,NON_PERISHABLE_FOOD,DRINKS,CLEANING_SUPPLIES
+}
