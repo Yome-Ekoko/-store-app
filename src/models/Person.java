@@ -1,7 +1,6 @@
-package convenienceStore;
+package models;
 
 import enums.Gender;
-import enums.Role;
 
 public abstract class Person {
     private String name;

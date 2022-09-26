@@ -1,23 +1,23 @@
 package services;
 
-import convenienceStore.CashierApplicant;
-import convenienceStore.Staff;
+import models.CashierApplicant;
+import models.Staff;
 import enums.Departments;
 import enums.Gender;
 import enums.Qualification;
 import enums.Role;
-import interfaces.Manager;
+import interfaces.ManagerService;
 
-public class ManagerService extends Staff implements Manager {
+public class Manager extends Staff implements ManagerService {
 
-    public ManagerService() {
+    public Manager() {
     }
 
-    public ManagerService(Integer id, Departments department, Role role) {
+    public Manager(Integer id, Departments department, Role role) {
         super(id, department, role);
     }
 
-    public ManagerService(String name, Gender gender, String email, Integer age, Integer id, Departments department, Role role) {
+    public Manager(String name, Gender gender, String email, Integer age, Integer id, Departments department, Role role) {
         super(name, gender, email, age, id, department, role);
     }
 

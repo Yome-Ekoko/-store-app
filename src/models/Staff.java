@@ -1,4 +1,4 @@
-package convenienceStore;
+package models;
 
 import enums.Departments;
 import enums.Gender;

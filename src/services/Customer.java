@@ -1,25 +1,24 @@
 package services;
 
-import convenienceStore.Person;
+import models.Person;
 import enums.Gender;
-import interfaces.Customer;
+import interfaces.CustomerService;
 import product.Products;
-import enums.ProductType;
 
-public class CustomerSer extends Person implements Customer {
+public class Customer extends Person implements CustomerService {
 
     private Double amountPaid;
     private Products productBought;
 
-    public CustomerSer() {
+    public Customer() {
     }
 
-    public CustomerSer(Double amountPaid, Products productBought) {
+    public Customer(Double amountPaid, Products productBought) {
         this.amountPaid = amountPaid;
         this.productBought = productBought;
     }
 
-    public CustomerSer(String name, Gender gender, String email, Integer age, Double amountPaid, Products productBought) {
+    public Customer(String name, Gender gender, String email, Integer age, Double amountPaid, Products productBought) {
         super(name, gender, email, age);
         this.amountPaid = amountPaid;
         this.productBought = productBought;

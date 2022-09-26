@@ -1,29 +1,27 @@
 package services;
 
-import convenienceStore.Receipt;
-import convenienceStore.Staff;
+import models.Receipt;
+import models.Staff;
 import enums.Departments;
 import enums.Gender;
 import enums.Role;
-import interfaces.Cashier;
-
-import java.time.LocalDateTime;
+import interfaces.CashierService;
 
 
-public class CashierService extends Staff implements Cashier {
+public class Cashier extends Staff implements CashierService {
 
     public Receipt receipt;
 
-    public CashierService(Receipt receipt) {
+    public Cashier(Receipt receipt) {
         this.receipt = receipt;
     }
 
-    public CashierService(Integer id, Departments department, Role role, Receipt receipt) {
+    public Cashier(Integer id, Departments department, Role role, Receipt receipt) {
         super(id, department, role);
         this.receipt = receipt;
     }
 
-    public CashierService(String name, Gender gender, String email, Integer age, Integer id, Departments department, Role role, Receipt receipt) {
+    public Cashier(String name, Gender gender, String email, Integer age, Integer id, Departments department, Role role, Receipt receipt) {
         super(name, gender, email, age, id, department, role);
         this.receipt = receipt;
     }
@@ -44,7 +42,7 @@ public class CashierService extends Staff implements Cashier {
     }
 
     @Override
-    public String sellProduct(CustomerSer customerSer) {
+    public String sellProduct(Customer customerSer) {
         if(customerSer.buyProduct().equals("Bought product")){
             return "Product sold!";
         }else{

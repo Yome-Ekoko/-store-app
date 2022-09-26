@@ -1,22 +1,19 @@
-package convenienceStore;
+package models;
 
-import interfaces.ReceiptSlips;
-import product.Products;
-import services.CashierService;
-import services.CustomerSer;
+import services.Customer;
 
 import java.time.LocalDateTime;
 
 public class Receipt {
 
     private  Integer receiptNum;
-    private CustomerSer customer;
+    private Customer customer;
     private String receiptSlip;
 
     public Receipt() {
     }
 
-    public Receipt(Integer receiptNum, CustomerSer customer) {
+    public Receipt(Integer receiptNum, Customer customer) {
         this.receiptNum = receiptNum;
         this.customer = customer;
 
@@ -31,11 +28,11 @@ public class Receipt {
         this.receiptNum = receiptNum;
     }
 
-    public CustomerSer getCustomer() {
+    public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(CustomerSer customer) {
+    public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 

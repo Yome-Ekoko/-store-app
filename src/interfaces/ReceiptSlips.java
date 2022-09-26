@@ -1,9 +1,9 @@
 package interfaces;
 
-import services.CashierService;
-import services.CustomerSer;
+import services.Cashier;
+import services.Customer;
 
 public interface ReceiptSlips {
-    public String getReceiptSlips(CashierService cashier, CustomerSer customer);
+    public String getReceiptSlips(Cashier cashier, Customer customer);
 
 }

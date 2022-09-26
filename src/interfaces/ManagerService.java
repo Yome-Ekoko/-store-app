@@ -1,8 +1,8 @@
 package interfaces;
 
-import convenienceStore.CashierApplicant;
-import convenienceStore.Staff;
+import models.CashierApplicant;
+import models.Staff;
 
-public interface Manager {
+public interface ManagerService {
 public String hireACashier(Staff staff, CashierApplicant cashierApplicant);
 }
