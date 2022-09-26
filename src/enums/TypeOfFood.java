@@ -1,4 +1,4 @@
-package FoodProd;
+package enums;
 
 public enum TypeOfFood {
     CANNED_PRODUCT,PACKED_PRODUCT,DEHYDRATED_PRODUCT, DAIRY_PRODUCT, MEAT, MEAT_PRODUCT, VEGETABLE

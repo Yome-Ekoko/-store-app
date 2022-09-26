@@ -1,83 +1,67 @@
 package services;
 
-import convenienceStore.CashierApplicant;
-import convenienceStore.Products;
+import convenienceStore.Receipt;
 import convenienceStore.Staff;
 import enums.Departments;
 import enums.Gender;
 import enums.Role;
 import interfaces.Cashier;
 
-import java.sql.Time;
-import java.util.Date;
-import java.util.SplittableRandom;
+import java.time.LocalDateTime;
+
 
 public class CashierService extends Staff implements Cashier {
-    private Date transactionDate;
-    private Time transactionTime;
-    private String salesStatus;
 
+    public Receipt receipt;
 
-    public CashierService() {
+    public CashierService(Receipt receipt) {
+        this.receipt = receipt;
     }
 
-    public CashierService(Date transactionDate, Time transactionTime, String salesStatus) {
-        this.transactionDate = transactionDate;
-        this.transactionTime = transactionTime;
-        this.salesStatus = salesStatus;
-    }
-
-    public CashierService(Integer id, Departments department, Role role, Date transactionDate, Time transactionTime, String salesStatus) {
+    public CashierService(Integer id, Departments department, Role role, Receipt receipt) {
         super(id, department, role);
-        this.transactionDate = transactionDate;
-        this.transactionTime = transactionTime;
-        this.salesStatus = salesStatus;
+        this.receipt = receipt;
     }
 
-    public CashierService(String name, Gender gender, String email, Integer age, Integer id, Departments department, Role role, Date transactionDate, Time transactionTime, String salesStatus) {
+    public CashierService(String name, Gender gender, String email, Integer age, Integer id, Departments department, Role role, Receipt receipt) {
         super(name, gender, email, age, id, department, role);
-        this.transactionDate = transactionDate;
-        this.transactionTime = transactionTime;
-        this.salesStatus = salesStatus;
+        this.receipt = receipt;
     }
 
-    public Date getTransactionDate() {
-        return transactionDate;
+    public Receipt getReceipt() {
+        return receipt;
     }
 
-    public void setTransactionDate(Date transactionDate) {
-        this.transactionDate = transactionDate;
-    }
-
-    public Time getTransactionTime() {
-        return transactionTime;
-    }
-
-    public void setTransactionTime(Time transactionTime) {
-        this.transactionTime = transactionTime;
-    }
-
-    public String getSalesStatus() {
-        if()
-        return salesStatus;
-    }
-
-    public void setSalesStatus(String salesStatus) {
-        this.salesStatus = salesStatus;
+    public void setReceipt(Receipt receipt) {
+        this.receipt = receipt;
     }
 
     @Override
-    public String sellProduct(Staff staff, CashierApplicant cashierApplicant) {
-
-        return null;
+    public String toString() {
+        return "CashierService{" +
+                "receipt=" + receipt +
+                "} " + super.toString();
     }
 
     @Override
-    public String dispenseReceipt(Staff staff, CashierApplicant cashierApplicant) {
-        if()
-        return null;
+    public String sellProduct(CustomerSer customerSer) {
+        if(customerSer.buyProduct().equals("Bought product")){
+            return "Product sold!";
+        }else{
+            return "Purchase incomplete";
+        }
     }
+
+    @Override
+    public String dispensesReceipt() {
+        return receipt.getReceiptSlip();
+    }
+
+
 }
+
+
+
 
 
 

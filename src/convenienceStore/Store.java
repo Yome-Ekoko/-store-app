@@ -1,7 +1,8 @@
 package convenienceStore;
 
+import product.Products;
+
 import java.util.List;
-import java.util.Set;
 
 public class Store {
     private Integer id;

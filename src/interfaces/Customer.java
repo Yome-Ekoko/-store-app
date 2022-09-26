@@ -1,8 +1,6 @@
 package interfaces;
 
-import services.Customer;
-
-public interface CustomerInt {
+public interface Customer {
     public String buyProduct();
 
     }

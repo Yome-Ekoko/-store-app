@@ -24,7 +24,6 @@ public class ManagerService extends Staff implements Manager {
     @Override
     public String hireACashier(Staff staff, CashierApplicant cashierApplicant) {
 
-
         if((staff.getRole().equals(Role.MANAGER)&&(cashierApplicant.getQualification().equals(Qualification.OND)||
                 cashierApplicant.getQualification().equals(Qualification.WAEC)) && cashierApplicant.getAge()>=18)){
             return "Congratulations, You are hired";

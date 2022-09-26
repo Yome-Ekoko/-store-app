@@ -2,8 +2,9 @@ package convenienceStore;
 
 import enums.Gender;
 import enums.Qualification;
+import interfaces.CashierApp;
 
-public class CashierApplicant extends Person{
+public class CashierApplicant extends Person implements CashierApp {
     private Qualification qualification;
 
     public CashierApplicant() {
@@ -31,6 +32,11 @@ public class CashierApplicant extends Person{
         return "CashierApplicant{" +
                 "qualification=" + qualification +
                 "} " + super.toString();
+    }
+
+    @Override
+    public String applyForJob() {
+        return "";
     }
 }
 

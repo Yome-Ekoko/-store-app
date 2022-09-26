@@ -1,9 +1,9 @@
-package convenienceStore;
+package product;
 
 
 import enums.ProductType;
 
-public abstract class Products {
+public class Products {
     private String productName;
     private String productId;
     private Double price;
