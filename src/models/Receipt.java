@@ -53,21 +53,19 @@ public class Receipt {
 
     public String getReceiptSlip() {
         LocalDateTime dateAndTime = LocalDateTime.now();
-        if (customer.buyProduct().equals("product purchased") || customer.buyProduct().equals("product purchased, you have a balance of "+
-                (customer.getAmountPaid() - customer.getProductBought().getAmount()) + " in your wallet") ) {
-            return "RECEIPT \n" + "Date: " + dateAndTime + "\nreceipt Number: " + receiptNum + "\n"
-                    + customer.getProductBought().getProductName() + "Product Quantity: " + customer.getProductBought().getQuantity() +
-                    " Rate: " + customer.getProductBought().getPrice() + " Total: " + customer.getProductBought().getAmount() +
-                    "\n Balance " +(customer.getAmountPaid()-customer.getProductBought().getAmount()) + "\n THANKS FOR YOUR PATRONAGE!";
-        } else {
-            return "Transaction incomplete";
-        }
 
 
+        if (customer.buyProduct().equals("product purchased") || customer.buyProduct().equals("product purchased, you have a balance of " +
+                (customer.getAmountPaid() - customer.getProductBought().getAmount()) + " in your wallet")) {
+               return "RECEIPT \n" + "Date: " + dateAndTime + "\nreceipt Number: " + receiptNum + "\n"
+                       + customer.getProductBought().getProductName() + "Product Quantity: " + customer.getProductBought().getQuantity() +
+                       " Rate: " + customer.getProductBought().getPrice() + " Total: " + customer.getProductBought().getAmount() +
+                       "\n Balance " + (customer.getAmountPaid() - customer.getProductBought().getAmount()) + "\n THANKS FOR YOUR PATRONAGE!";
+           } else {
+               return "Transaction incomplete";
+           }
 
     }
-
-
 }
 
 

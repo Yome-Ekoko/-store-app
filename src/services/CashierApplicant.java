@@ -1,8 +1,9 @@
-package models;
+package services;
 
 import enums.Gender;
 import enums.Qualification;
 import interfaces.CashierApp;
+import models.Person;
 
 public class CashierApplicant extends Person implements CashierApp {
     private Qualification qualification;
@@ -36,7 +37,7 @@ public class CashierApplicant extends Person implements CashierApp {
 
     @Override
     public String applyForJob() {
-        return "";
+        return "Application Successful";
     }
 }
 

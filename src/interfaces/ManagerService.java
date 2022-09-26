@@ -1,6 +1,6 @@
 package interfaces;
 
-import models.CashierApplicant;
+import services.CashierApplicant;
 import models.Staff;
 
 public interface ManagerService {

@@ -1,6 +1,5 @@
 package services;
 
-import models.CashierApplicant;
 import models.Staff;
 import enums.Departments;
 import enums.Gender;
@@ -28,7 +27,9 @@ public class Manager extends Staff implements ManagerService {
                 cashierApplicant.getQualification().equals(Qualification.WAEC)) && cashierApplicant.getAge()>=18)){
             return "Congratulations, You are hired";
         }
-        else{
+        else if (!staff.getRole().equals(Role.MANAGER)) {
+            return " Access Denied!!";
+        }else{
 
             return "Sorry you have been disqualified";
         }

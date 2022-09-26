@@ -42,8 +42,8 @@ public class Cashier extends Staff implements CashierService {
     }
 
     @Override
-    public String sellProduct(Customer customerSer) {
-        if(customerSer.buyProduct().equals("Bought product")){
+    public String sellProduct(Customer customer) {
+        if(customer.buyProduct().equals("product purchased")){
             return "Product sold!";
         }else{
             return "Purchase incomplete";
