@@ -17,14 +17,16 @@ public class Main {
 
 
 //        System.out.println(cashier.dispenseReceipt(cashier, cust1));
-        System.out.println(receipt.getReceiptSlip());
-        System.out.println(receipt.getReceiptSlip());
+//        System.out.println(receipt.getReceiptSlip());
+//        System.out.println(receipt.getReceiptSlip());
 
         CashierApplicant applicant = new CashierApplicant("Maustapha",Gender.MALE,"musty.abayomi@gmail.com",25, Qualification.BSC);
+        CashierApplicant applicant2 = new CashierApplicant("Maustapha",Gender.MALE,"musty.abayomi@gmail.com",25, Qualification.OND);
         Manager manager = new Manager("Yome",Gender.FEMALE,"", 35,123,Departments.MANAGEMENT,Role.CASHIER);
         Manager manager2 = new Manager("Yome",Gender.FEMALE,"", 35,123,Departments.MANAGEMENT,Role.MANAGER);
-        System.out.println(manager.hireACashier(manager,applicant));
-        System.out.println(applicant.applyForJob());
+//        System.out.println(manager.hireACashier(manager,applicant));
+//        System.out.println(applicant.applyForJob());
+        System.out.println(receipt.getReceiptSlip());
 
 
     }
